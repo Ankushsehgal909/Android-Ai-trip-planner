@@ -10,10 +10,11 @@ export default function TravelerScreen({option}) {
   
   const onBudgetSelect=()=>{
      setTripData({...tripData,
-      traveler:option.title
+      traveler:option.title,
+      people:option.people
     });
     // console.log(tripData)
-    router.push('/create-trip/select-Dates')
+    router.push('/create-trip/select-dates')
 
   }
 

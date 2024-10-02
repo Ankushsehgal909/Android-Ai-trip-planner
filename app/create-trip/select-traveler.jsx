@@ -33,7 +33,7 @@ export default function SelectTraveler() {
         marginTop:5,
         color:Colors.black,
         marginBottom:30
-      }}>Choose your travelers</Text>
+      }}>Choose your travelers </Text>
       
 
       <FlatList data={SelelctTravelersList}

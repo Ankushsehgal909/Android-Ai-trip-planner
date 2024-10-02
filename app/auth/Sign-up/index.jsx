@@ -5,6 +5,7 @@ import { Colors } from '../../../constants/Colors';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../config/FirebaseConfig';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 export default function index() {
@@ -34,6 +35,7 @@ export default function index() {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+     AsyncStorage.setItem('user', JSON.stringify(user));
     router.replace('/MyTrip');
     // ...
   })

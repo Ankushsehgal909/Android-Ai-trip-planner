@@ -7,9 +7,9 @@ import axios from 'axios';
 import { createTripContext } from '../../context/createTripContext';
 
 
-const API_KEY = '8ae9ae02f08b4316b32bb514c4c6d391';
 
 const AddressAutocomplete = () => {
+const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
   const {tripData,setTripData}=useContext(createTripContext)
   const [suggestions, setSuggestions] = useState([]);
 
@@ -22,7 +22,7 @@ const AddressAutocomplete = () => {
       headerTransparent:true,
       headerTitle:'Search'
     })
-  })
+  },[])
 
 
   const fetchSuggestions = async (input) => {
